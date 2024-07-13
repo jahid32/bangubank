@@ -1,0 +1,19 @@
+{
+    "name": "mostafizur/bangubank",
+    "description": "A simple transaction app",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Md Mostafizur Rahman",
+            "email": "jahid32@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
