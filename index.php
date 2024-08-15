@@ -2,9 +2,9 @@
 
 require __DIR__ . '/vendor/autoload.php';
 
+use App\Storage\FileStorage;
 use App\Controllers\LoginController;
 use App\Controllers\RegisterController;
-
 
 $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 $uriSegments = explode('/', trim($uri, '/'));
@@ -19,9 +19,13 @@ if ($uriSegments[0] === 'register') {
     }else{
       $controller->index();
     }
-} elseif ($uriSegments[0] === 'login') {
-    $controller = new LoginController();
+}elseif ($uriSegments[0] === 'login') {
+  $controller = new LoginController($storage);
+  if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $controller->login();
+  }else{
+    $controller->index();
+  }
 }
 else {
    include __DIR__ . '/views/index.view.php';

@@ -1,5 +1,5 @@
 <?php
-
+namespace App\Storage;
 use App\Storage\StorageInterface;
 
 class FileStorage implements StorageInterface
