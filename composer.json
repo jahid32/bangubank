@@ -1,19 +1,25 @@
 {
-    "name": "mostafizur/bangubank",
-    "description": "A simple transaction app",
-    "type": "project",
+    "name": "jahid32/simplemvc",
+    "description": "A simple mvc structure project",
+    "type": "framework",
     "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
-    },
     "authors": [
         {
-            "name": "Md Mostafizur Rahman",
+            "name": "Md  Mostafizur Rahman",
             "email": "jahid32@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "symfony/routing": "^7.1",
+        "symfony/http-kernel": "^7.1",
+        "symfony/http-foundation": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "helpers.php"
+        ]
+    }
 }
